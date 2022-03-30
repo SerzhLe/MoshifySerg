@@ -1,0 +1,14 @@
+/* First step: define components of the website */
+
+/* Second step: define color palette (primary, secondary, accent) */
+:root {
+  /* colors of components */
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+
+  /* colors of text */
+  --color-heading: #1b0760;
+  --color-body: #b2afbf;
+}
+/* make a commit to repository */
