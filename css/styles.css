@@ -1,6 +1,7 @@
 /* First step: define components of the website */
 
 /* Second step: define color palette (primary, secondary, accent) */
+/* Color paletter */
 :root {
   /* colors of components */
   --color-primary: #2584ff;
@@ -16,6 +17,7 @@
 /* Third step: define typography (mobile-first approach) */
 /* Look at the fonts and try to minimize the variation number of different fonts */
 
+/* Typography */
 html {
   font-size: 62.5%;
 }
@@ -61,5 +63,36 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Fourth step: make first reusable component - link "LEARN MORE->" */
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.link-arrow:after {
+  margin-left: 0.25rem;
+  content: "-->";
+  transition: margin-left 0.3s;
+}
+
+/* target element 'after' in 'hover' effect */
+.link-arrow:hover::after {
+  margin-left: 0.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
