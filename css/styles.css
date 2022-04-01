@@ -125,6 +125,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -153,12 +154,14 @@ a {
 
 .list--tick {
   list-style-image: url(../images/tick.svg);
-  padding: 3rem;
+  padding: 0 3rem;
+  margin: 1.5rem 0;
 }
 
 .list--tick .list__item {
   padding-left: 1rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.15rem;
 }
 
 @media screen and (min-width:1024px) {
@@ -296,7 +299,6 @@ background-color: hsl(189deg, 100%, 45%);
 
 /* Cards */
 .card {
-  height: 50vh;
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #e2e0e9;
   overflow: hidden;
@@ -317,4 +319,68 @@ background-color: hsl(189deg, 100%, 45%);
 
 .card--secondary .card__header {
   background-color: var(--color-secondary);
+}
+
+/* Plan */
+.plan {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 450px;
+}
+
+.plan__name {
+  margin: 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.card--primary .badge--primary {
+  background-color: hsl(214deg, 100%, 50%);
+}
+
+.card--secondary .badge--secondary {
+  background-color: hsl(189deg, 100%, 45%);
+}
+
+.plan__description {
+  white-space: nowrap;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.plan .card__body {
+  font-size: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {  /*сделали так что если хочешь сделать карточку popular - Нужно всего лишь указать класс .plan--popular*/
+  content: url(../images/popular.svg);
+  position: absolute;
+  right: 5%;
+  top: -10px;
+  display: inline-block;
+  width: 45px;
+}
+
+
+@media screen and (min-width:1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan_price {
+    font-size: 5rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
 }
