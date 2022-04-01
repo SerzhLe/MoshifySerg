@@ -183,61 +183,24 @@ a {
   justify-content: center;
 }
 
-.search-icon {
-  fill: #fff;
-  height: 25px;
-  padding-left:3rem;
-  padding-right: 1rem;
-  width: 25px;
-}
-
 /* Buttons */
-/* Button-frame */
+
 .button {
-  align-items: center;
+  width: 100%;
+  height: 8vh;
   border: 0;
-  cursor: pointer;
-  display: flex;
+  border-radius: 30px;
   font-size: 1.8rem;
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 0.1rem;
-  padding: 0;
   text-transform: uppercase;
-}
-
-/* Button variety */
-.buy-button {
-  border-radius: 30px;
   font-weight: 600;
-  height: 60px;
-  width: 400px;
+  cursor: pointer;
+  color: #fff;
+  padding: 1rem;
 }
 
-.start-button {
-  border-radius: 40px;
-  height: 68px;
-  width: 400px;
-}
-
-.search-button {
-  background-color: var(--color-accent);
-  border-radius: 30px;
-  font-size: 1.5rem;
-  height: 63px;
-  justify-content: left;
-  width: 175px;
-}
-
-.footer-button {
-  width: 317px;
-  height: 73px;
-  border-radius: 40px;
-}
-
-/* Button-colors */
 .button--primary {
   background-color: #fff;
+  color: var(--color-heading);
   border: 2px solid var(--color-heading);
 }
 
@@ -246,8 +209,15 @@ a {
   color: #fff;
 }
 
+.button--secondary {
+  background-color: var(--color-secondary);
+}
+
+.button--secondary:hover {
+background-color: hsl(189deg, 100%, 45%);
+}
+
 .button--accent {
-  color: #fff;
   background-color: var(--color-accent);
 }
 
@@ -255,36 +225,65 @@ a {
   background-color: hsl(12deg, 100%, 45%);
 }
 
-.button--secondary {
-  color: #fff;
-  background-color: var(--color-secondary);
-}
-
-.button--secondary:hover {
-  background-color: hsl(189deg, 100%, 45%);
-}
-
 @media screen and (min-width:1024px) {
   .button {
     font-size: 1.5rem;
   }
+}
 
-  .buy-button {
-    width: 260px;
-    height: 53px;
+
+/* Inputs */
+
+.domain-input {
+  outline: 0;
+  font-size: 1.8rem;
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  color: var(--color-heading);
+}
+
+.domain-input::placeholder {
+  color: hsl(251deg, 11%, 80%);
+}
+
+.input-group {
+  margin: auto;
+  display: flex;
+  border-radius: 30px;
+  padding: 0.25rem 0.5rem;
+  width: 90%;
+  box-shadow: 0 0 30px 15px rgb(236, 231, 231);
+}
+
+.input-group .domain-input {
+  margin-left: 1rem;
+  flex-grow: 1;
+}
+
+.input-group .button {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group .icon {
+  width: 20px;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width:1024px) {
+  .input-group {
+    width: 40%;
   }
 
-  .start-button {
-    width: 190px;
-    height: 63px;
+  .input-group .button {
+    width: 30%;
   }
 
-  .search-button {
-    height: 56px;
-  }
-
-  .footer-button {
-    width: 225px;
-    height: 65px;
+  .domain-input {
+    font-size: 1.5rem;
   }
 }
