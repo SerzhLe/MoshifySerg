@@ -183,3 +183,108 @@ a {
   justify-content: center;
 }
 
+.search-icon {
+  fill: #fff;
+  height: 25px;
+  padding-left:3rem;
+  padding-right: 1rem;
+  width: 25px;
+}
+
+/* Buttons */
+/* Button-frame */
+.button {
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* Button variety */
+.buy-button {
+  border-radius: 30px;
+  font-weight: 600;
+  height: 60px;
+  width: 400px;
+}
+
+.start-button {
+  border-radius: 40px;
+  height: 68px;
+  width: 400px;
+}
+
+.search-button {
+  background-color: var(--color-accent);
+  border-radius: 30px;
+  font-size: 1.5rem;
+  height: 63px;
+  justify-content: left;
+  width: 175px;
+}
+
+.footer-button {
+  width: 317px;
+  height: 73px;
+  border-radius: 40px;
+}
+
+/* Button-colors */
+.button--primary {
+  background-color: #fff;
+  border: 2px solid var(--color-heading);
+}
+
+.button--primary:hover {
+  background-color: var(--color-heading);
+  color: #fff;
+}
+
+.button--accent {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.button--accent:hover {
+  background-color: hsl(12deg, 100%, 45%);
+}
+
+.button--secondary {
+  color: #fff;
+  background-color: var(--color-secondary);
+}
+
+.button--secondary:hover {
+  background-color: hsl(189deg, 100%, 45%);
+}
+
+@media screen and (min-width:1024px) {
+  .button {
+    font-size: 1.5rem;
+  }
+
+  .buy-button {
+    width: 260px;
+    height: 53px;
+  }
+
+  .start-button {
+    width: 190px;
+    height: 63px;
+  }
+
+  .search-button {
+    height: 56px;
+  }
+
+  .footer-button {
+    width: 225px;
+    height: 65px;
+  }
+}
