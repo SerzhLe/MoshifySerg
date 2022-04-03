@@ -416,3 +416,52 @@ background-color: hsl(189deg, 100%, 45%);
     margin-top: 2.5rem;
   }
 }
+
+/* Quote component */
+.quote__text {
+  font-style: italic;
+  font-weight: 500;
+  color: hsl(251deg, 11%, 40%);
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__sign {
+  display: flex;
+}
+
+.quote__line {
+  margin-right: 1.5rem;
+}
+
+.quote__full-name {
+  font-weight: bold;
+  color: var(--color-heading);
+  margin-bottom: 0;
+  letter-spacing: 0.1rem;
+}
+
+.quote__company-name {
+  font-size: 2rem;
+  color: hsl(251deg, 11%, 85%);
+}
+
+@media screen and (min-width:1024px) {
+  .quote__full-name {
+      font-size: 2rem;
+  }
+
+  .quote__company-name {
+    font-size: 1.5rem;
+  }
+
+  .quote__author-info {
+    margin-top: 0.5rem;
+  }
+}
