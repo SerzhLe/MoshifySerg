@@ -143,7 +143,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-heading);
 }
 
 /*we do not want css to know about HTML tags*/
@@ -164,6 +163,10 @@ a {
   letter-spacing: 0.15rem;
 }
 
+.list__item-primary {
+  color: var(--color-heading);
+}
+
 @media screen and (min-width:1024px) {
   .list--tick .list__item {
     padding-left: 0.5rem;
@@ -179,6 +182,14 @@ a {
  
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon--gray {
+  fill: var(--color-body);
 }
 
 .icon-container {
@@ -575,47 +586,34 @@ background-color: hsl(189deg, 100%, 45%);
 
 
 /* Collapsibles */
-.footer-section {
-  padding: 1rem;
-  border-bottom: 1px solid var(--color-body);
-  background-color: #000;
-}
-
-.footer-link-header {
+.collapsible__header {
   display: flex;
+  justify-content: space-between;
 }
 
-.footer-section h2 {
+.collapsible__heading {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 0;
-  width: 100%;
-  color: #fff;
 }
 
-.footer-link-body .list__item {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: rgb(102, 101, 105);
-}
-
-.footer-link-header .collapsible__chevron {
-  transform: rotate(-90deg);
-  transition: transform 0.5s;
-}
-
-.footer-link-body {
+.collapsible__content {
   max-height: 0; /*это для того чтобы сделать плавное отображение*/
   overflow: hidden; /*потому что с display: none - нельзя установить в transition*/
   transition: max-height 0.7s, opacity 0.7s;
   opacity: 0;
 }
 
-.collapsible__expanded .collapsible__chevron {
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+
+.collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
 
-.collapsible__expanded .footer-link-body {
+.collapsible--expanded .collapsible__content {
   max-height: 100vh;/*это для того чтобы сделать плавное отображение*/
   opacity: 1;
 }
@@ -657,4 +655,84 @@ background-color: hsl(189deg, 100%, 45%);
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* Navigation bar */
+.nav {
+  background-color: #000;
+  padding: 1rem;
+}
+
+.nav > .list {
+  margin: 0;
+}
+
+.nav__menu-icon {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.logo {
+  width: 150px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.collapsible__link {
+  color: hsl(251deg, 10%, 80%);
+  font-size: 2rem;
+}
+
+.nav__menu-icon:hover { 
+  fill: #fff;
+  opacity: 1;
+}
+
+.collapsible__link:hover {
+  color: #fff;
+}
+
+.collapsible__content .list__item {
+  padding: 0.3rem 2rem;
+  border-bottom: 1px solid hsl(251deg, 0%, 15%);
+}
+
+
+.collapsible__content .list__item:last-child {
+  border: 0;
+}
+
+.nav.collapsible--expanded .nav__menu-icon { 
+  /*потому что хотим применять правило когда блок имеет два этих класса*/
+  fill: #fff;
+  box-shadow: 0 0 0 3px gray;
+  border-radius: 5px;
+  box-sizing: content-box;
+  opacity: 1;
+}
+
+@media screen and (min-width:768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .nav__menu-icon {
+    display: none;
+  }
+
+  .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  .collapsible__content .list__item {
+    border: 0;
+  }
+
+  .collapsible__link {
+    font-size: 1.6rem;
+  }
 }
