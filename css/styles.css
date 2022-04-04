@@ -523,6 +523,7 @@ background-color: hsl(189deg, 100%, 45%);
   width: 30px;
 }
 
+
 /* Callouts */
 .callout {
   padding: 5%;
@@ -571,3 +572,51 @@ background-color: hsl(189deg, 100%, 45%);
     padding: 20px 10px 0 10px;
   }
 }
+
+
+/* Collapsibles */
+.footer-section {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-body);
+  background-color: #000;
+}
+
+.footer-link-header {
+  display: flex;
+}
+
+.footer-section h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.footer-link-body .list__item {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: rgb(102, 101, 105);
+}
+
+.footer-link-header .collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+
+.footer-link-body {
+  max-height: 0; /*это для того чтобы сделать плавное отображение*/
+  overflow: hidden; /*потому что с display: none - нельзя установить в transition*/
+  transition: max-height 0.7s, opacity 0.7s;
+  opacity: 0;
+}
+
+.collapsible__expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible__expanded .footer-link-body {
+  max-height: 100vh;/*это для того чтобы сделать плавное отображение*/
+  opacity: 1;
+}
+
