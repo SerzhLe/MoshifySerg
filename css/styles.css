@@ -39,6 +39,7 @@ h2,
 h3 {
   color: var(--color-heading);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -627,6 +628,9 @@ background-color: hsl(189deg, 100%, 45%);
 
 .block__header {
   text-align: center;
+  font-size: 2rem;
+  color: hsl(251deg, 6%, 75%);
+  letter-spacing: 1px;
 }
 
 .block__heading {
@@ -657,10 +661,15 @@ background-color: hsl(189deg, 100%, 45%);
   margin: 0 auto;
 }
 
+
 /* Navigation bar */
 .nav {
   background-color: #000;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .nav > .list {
@@ -715,7 +724,7 @@ background-color: hsl(189deg, 100%, 45%);
   .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .nav__menu-icon {
@@ -734,5 +743,37 @@ background-color: hsl(189deg, 100%, 45%);
 
   .collapsible__link {
     font-size: 1.6rem;
+  }
+}
+
+
+/* Hero - banner - first block presentation of site */
+.hero__text {
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__content .block__heading {
+  font-size: 6rem;
+  padding: 3rem 0;
+}
+
+.container a {
+  padding: 2rem 5rem;
+}
+
+
+@media screen and (min-width:768px) {
+  .hero__content {
+    text-align: start;
+    align-self: center;
+  }
+
+  .hero__content .block__heading {
+    font-size: 7.5rem;
+    padding: 0;
   }
 }
