@@ -51,11 +51,23 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 p {
   margin-top: 0;
+}
+
+.heading-white {
+  color: #fff;
+}
+
+.heading-line-height {
+  line-height: 1.3;
+}
+
+.large__image {
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -130,10 +142,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .badge {
-    font-size: 1.5rem;
-  }
-
   .badge--small {
     font-size: 1.2rem;
   }
@@ -161,12 +169,13 @@ a {
 .list--tick .list__item {
   padding-left: 1rem;
   margin-bottom: 1.5rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
 }
 
 .list__item-primary {
   color: var(--color-heading);
 }
+
 
 @media screen and (min-width:1024px) {
   .list--tick .list__item {
@@ -207,7 +216,6 @@ a {
 
 .button {
   width: 100%;
-  height: 8vh;
   border: 0;
   border-radius: var(--border-radius);
   font-size: 1.8rem;
@@ -215,7 +223,7 @@ a {
   font-weight: 600;
   cursor: pointer;
   color: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   white-space: nowrap;
 }
 
@@ -273,7 +281,7 @@ background-color: hsl(189deg, 100%, 45%);
   display: flex;
   border-radius: var(--border-radius);
   padding: 0.25rem 0.5rem;
-  width: 90%;
+  width: 95%;
   box-shadow: 0 0 30px 15px rgb(236, 231, 231);
 }
 
@@ -287,9 +295,10 @@ background-color: hsl(189deg, 100%, 45%);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
-.input-group .icon {
+.button .icon {
   width: 20px;
   fill: #fff;
   margin-right: 0.5rem;
@@ -297,11 +306,11 @@ background-color: hsl(189deg, 100%, 45%);
 
 @media screen and (min-width:1024px) {
   .input-group {
-    width: 40%;
+    width: 43%;
   }
 
   .input-group .button {
-    width: 30%;
+    width: 35%;
   }
 
   .domain-input {
@@ -315,6 +324,11 @@ background-color: hsl(189deg, 100%, 45%);
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #e2e0e9;
   overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card__header,
@@ -334,6 +348,14 @@ background-color: hsl(189deg, 100%, 45%);
   background-color: var(--color-secondary);
 }
 
+.card--primary .badge--primary {
+  background-color: hsl(214deg, 100%, 50%);
+}
+
+.card--secondary .badge--secondary {
+  background-color: hsl(189deg, 100%, 45%);
+}
+
 /* Plan */
 .plan {
   margin: 50px auto;
@@ -351,18 +373,10 @@ background-color: hsl(189deg, 100%, 45%);
   font-size: 6rem;
 }
 
-.card--primary .badge--primary {
-  background-color: hsl(214deg, 100%, 50%);
-}
-
-.card--secondary .badge--secondary {
-  background-color: hsl(189deg, 100%, 45%);
-}
-
 .plan__description {
   white-space: nowrap;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -383,10 +397,19 @@ background-color: hsl(189deg, 100%, 45%);
   width: 45px;
 }
 
+.plan--popular .list {
+  margin-bottom: 4rem;
+}
+
 
 @media screen and (min-width:1024px) {
+  .plan {
+    width: 350px;
+    margin: 50px 10px;
+  }
+
   .plan__name {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 
   .plan_price {
@@ -404,26 +427,31 @@ background-color: hsl(189deg, 100%, 45%);
   display: flex;
 }
 
-.media__body h3 {
+.media__body-heading {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  line-height: 1.5;
 }
 
 .media__body p {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .media__icon {
   fill: var(--color-primary);
+  color: var(--color-primary);
   margin-top: 3.5rem;
   margin-right: 1.5rem;
 }
 
 @media screen and (min-width:1024px) {
-  .media__body h3, 
-  .media__body p {
-    font-size: 1.8rem;
-  }
+  /* .media__body h3 {
+    font-size: 2rem;
+  } */
+
+  /* .media__body p {
+    font-size: 1.5rem;
+  } */
 
   .media__icon {
     margin-top: 2.5rem;
@@ -432,15 +460,13 @@ background-color: hsl(189deg, 100%, 45%);
 
 /* Quote component */
 .quote {
-  margin-left: 2.5rem;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
 .quote__text {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
   color: hsl(251deg, 11%, 40%);
-  font-size: 2rem;
 }
 
 .quote__text::before {
@@ -453,6 +479,7 @@ background-color: hsl(189deg, 100%, 45%);
 
 .quote__sign {
   display: flex;
+  margin-top: 2rem;
 }
 
 .quote__line {
@@ -460,16 +487,15 @@ background-color: hsl(189deg, 100%, 45%);
 }
 
 .quote__full-name {
-  font-weight: bold;
   color: var(--color-heading);
   margin-bottom: 0;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .quote__company-name {
-  font-size: 1.5rem;
-  color: hsl(251deg, 11%, 85%);
+  font-size: 1.3rem;
+  color: rgb(174, 173, 179);
 }
 
 @media screen and (min-width:1024px) {
@@ -506,8 +532,8 @@ background-color: hsl(189deg, 100%, 45%);
 /* Card - customer's feedback */
 .quote-card {
   width: 80vw;
-  margin-left: 50px;
-  padding: 20px;
+  margin: auto;
+  padding: 20px 0;
   border-radius: 5px;
   box-shadow: 0 0 60px 10px lightgray;
 }
@@ -527,7 +553,7 @@ background-color: hsl(189deg, 100%, 45%);
   right: 0;
   top: 0;
   background-color: var(--color-accent);
-  transform: translateX(50%) translateY(50%);
+  transform: translateX(50%) translateY(50%); /*поместить иконку цитаты на половину своего размера вправо и вниз*/
 } 
 
 .quote-card .icon {
@@ -535,23 +561,24 @@ background-color: hsl(189deg, 100%, 45%);
   width: 30px;
 }
 
+@media screen and (min-width: 1024px) {
+  .quote-card {
+    width: 70vw;
+  }
+}
+
 
 /* Callouts */
 .callout {
-  padding: 5%;
+  padding: 2rem;
   font-size: 2rem;
   border-radius: 5px;
+  margin: auto;
 }
 
 .callout--primary {
   background: var(--color-primary);
   color: white;
-}
-
-.callout h2 {
-  margin-top: 0;
-  color: #fff;
-  font-size: 3rem;
 }
 
 .callout .grid {
@@ -562,7 +589,7 @@ background-color: hsl(189deg, 100%, 45%);
 }
 
 .callout .button {
-  width: 220px;
+  width: 250px;
   text-align: center;
 }
 
@@ -574,14 +601,8 @@ background-color: hsl(189deg, 100%, 45%);
       align-items: center;
   }
 
-  .callout__content {
-    font-size: 1.8rem;
-  }
-
-  .callout .button {
-    font-size: 1.5rem;
-    height: 60px;
-    padding: 20px 10px 0 10px;
+  .callout {
+    padding: 3rem;
   }
 }
 
@@ -590,10 +611,11 @@ background-color: hsl(189deg, 100%, 45%);
 .collapsible__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .collapsible__heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   margin: 0;
 }
@@ -601,13 +623,36 @@ background-color: hsl(189deg, 100%, 45%);
 .collapsible__content {
   max-height: 0; /*это для того чтобы сделать плавное отображение*/
   overflow: hidden; /*потому что с display: none - нельзя установить в transition*/
-  transition: max-height 0.7s, opacity 0.7s;
   opacity: 0;
+  transition: max-height 0.7s, opacity 0.7s;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+.collapsible__link-footer:hover {
+  color: rgb(224, 219, 219);
+}
+
+.collapsible__content--dark {
+  color: rgb(133, 124, 124);
+}
+
+.collapsible-border-padding {
+  border-bottom: 1px solid rgb(122, 118, 118);
+  margin: 5%;
+  padding: 5%;
+  padding-top: 0;
 }
 
 .collapsible__chevron {
+  width: 30px;
   transform: rotate(-90deg);
   transition: transform 0.5s;
+}
+
+.collapsible__list--margin {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .collapsible--expanded .collapsible__chevron {
@@ -629,21 +674,20 @@ background-color: hsl(189deg, 100%, 45%);
 .block__header {
   text-align: center;
   font-size: 2rem;
-  color: hsl(251deg, 6%, 75%);
+  color: hsl(251deg, 6%, 60%);
   letter-spacing: 1px;
 }
 
 .block__heading {
   margin-top: 0;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
 }
 
 .block--dark {
   background-color: #000;
   color: #7b858b;
-}
-
-.block--dark .block__heading {
-  color: #fff;
 }
 
 .block--skewed--left {
@@ -668,7 +712,7 @@ background-color: hsl(189deg, 100%, 45%);
   padding: 1rem;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2; /*потому что callout элемент имеет z-индекс 1*/
   width: 100%;
 }
 
@@ -682,8 +726,6 @@ background-color: hsl(189deg, 100%, 45%);
 }
 
 .logo {
-  width: 150px;
-  height: 35px;
   object-fit: cover;
 }
 
@@ -701,18 +743,17 @@ background-color: hsl(189deg, 100%, 45%);
   color: #fff;
 }
 
-.collapsible__content .list__item {
-  padding: 0.3rem 2rem;
+.list__item-with-border {
   border-bottom: 1px solid hsl(251deg, 0%, 15%);
 }
 
-
-.collapsible__content .list__item:last-child {
-  border: 0;
+.list__item-with-padding {
+  padding: 0.3rem 2rem;
 }
 
+
 .nav.collapsible--expanded .nav__menu-icon { 
-  /*потому что хотим применять правило когда блок имеет два этих класса*/
+  /* два класса объеденены потом что хотим чтобы правило было когда доступны эти два класса */
   fill: #fff;
   box-shadow: 0 0 0 3px gray;
   border-radius: 5px;
@@ -724,7 +765,6 @@ background-color: hsl(189deg, 100%, 45%);
   .nav {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
   }
 
   .nav__menu-icon {
@@ -737,7 +777,7 @@ background-color: hsl(189deg, 100%, 45%);
     display: flex;
   }
 
-  .collapsible__content .list__item {
+  .list__item-with-border {
     border: 0;
   }
 
@@ -749,11 +789,7 @@ background-color: hsl(189deg, 100%, 45%);
 
 /* Hero - banner - first block presentation of site */
 .hero__text {
-  margin: 2rem 0 5rem;
-}
-
-.hero__image {
-  width: 100%;
+  padding: 2rem 0 5rem;
 }
 
 .hero__content .block__heading {
@@ -761,8 +797,15 @@ background-color: hsl(189deg, 100%, 45%);
   padding: 3rem 0;
 }
 
-.container a {
-  padding: 2rem 5rem;
+.hero__content .button {
+  width: 250px;
+  margin: auto;
+}
+
+.link-with-padding {
+  display: flex ;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -770,6 +813,10 @@ background-color: hsl(189deg, 100%, 45%);
   .hero__content {
     text-align: start;
     align-self: center;
+  }
+
+  .hero__content .button {
+    margin: 0;
   }
 
   .hero__content .block__heading {
@@ -787,3 +834,204 @@ background-color: hsl(189deg, 100%, 45%);
 
 
 /* Domain block - то что идет ниже баннера */
+.domain-block {
+  color: var(--color-heading);
+}
+
+.domain-block .block__header{
+  letter-spacing: 0;
+  margin-bottom: 3.5rem;
+}
+
+.list--grid {
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.domain-list__item {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  min-width: 100px;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.domain-list__item:hover {
+  border-radius: var(--border-radius);
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  background-color: var(--color-secondary);
+}
+
+@media screen and (min-width: 780px) { /*780px выбрал потому что при 775рх возникает смещение длинных названий*/
+  .list--grid {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* Plans block */
+@media screen and (min-width: 1024px) {
+  .plan-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+/* Features block */
+.feature-block__head {
+  padding-bottom: 0;
+}
+
+.feature-header .block__header{
+  text-align: start;
+  letter-spacing: 0;
+}
+
+.feature-header .icon-container {
+  margin-bottom: 1rem;
+}
+
+.feature-header {
+  margin-bottom: 3rem;
+}
+
+.feature-header .link-arrow {
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-block:nth-child(even) .feature-header {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feature-header .block__heading {
+    font-size: 3rem;
+  }
+
+  .feature-header .block__header {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Showcase block */
+.showcase-block .block__header {
+  margin-bottom: 4rem;
+}
+
+.showcase-block .list {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase-block .grid {
+    justify-content: end;
+    grid-template-columns: auto 40%;
+    margin: auto;
+  }
+
+  .showcase-block .large__image {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .showcase-block {
+    padding-bottom: 10rem;
+  }
+
+  .showcase-block .grid {
+    justify-content: center;
+  }
+}
+
+/* Testimonial block */
+.testimonial-block .block__header {
+  letter-spacing: 0;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+.footer__and__callout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.footer {
+  background-color: rgb(44, 43, 43);
+  padding-top: 8rem;
+  position: relative;
+}
+
+.footer__logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3rem 0;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+
+.footer__and__callout .callout {
+  position: relative;
+  top: 5rem;
+  z-index: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /*если захотим добавить еще одну колонку - не надо будет менять количество*/
+    padding: 8rem 4rem 4rem 4rem;
+    justify-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  
+  .footer .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+  }
+  
+  .collapsible__link-footer {
+    text-align: start;
+    transition: color 0.3s;
+  }
+  
+  .footer__logo-block {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 0;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .footer .collapsible-border-padding {
+    border: 0;
+  }
+  
+  .footer .callout {
+    bottom: 22rem;
+  }
+
+  .footer img {
+      width: 100%;
+  }
+}
+
+
