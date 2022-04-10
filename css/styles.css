@@ -859,14 +859,9 @@ background-color: hsl(189deg, 100%, 45%);
   min-width: 100px;
   padding: 0.75rem;
   cursor: pointer;
-}
-
-.domain-list__item:hover {
-  border-radius: var(--border-radius);
   text-align: center;
-  white-space: nowrap;
-  color: #fff;
-  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid hsl(207deg, 76%, 79%);
 }
 
 @media screen and (min-width: 780px) { /*780px выбрал потому что при 775рх возникает смещение длинных названий*/
