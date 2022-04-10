@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moshify</title>
+    <meta
+      name="description"
+      content="Deploy your websites in less than 60 seconds."
+    />
+    <meta property="og:title" content="Moshify - Take care of Your Host" />
+    <meta
+      property="og:description"
+      content="Moshify your site in less than 60 sec!"
+    />
+    <meta property="og:title" content="Moshify..." />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://moshifybyserg.com" />
+    <title>Moshify - Take Care of Your Host</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +26,8 @@
     <!-- Inter - is variable font - это значит что неважно сколько мы шрифтов запрашиваем на загрузку - будет выполняться ОДИН http запрос -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animation when scrolling-->
   </head>
   <body>
     <!-- Navigation bar -->
@@ -21,7 +35,10 @@
       <nav class="nav collapsible">
         <div class="collapsible__header">
           <a href="#"
-            ><img class="logo" src="images/logo(header).png" alt="Site logo - Moshify."
+            ><img
+              class="logo"
+              src="images/logo(header).png"
+              alt="Site logo - Moshify."
           /></a>
           <svg class="icon icon--gray nav__menu-icon">
             <use xlink:href="images/sprite.svg#menu"></use>
@@ -29,16 +46,36 @@
         </div>
         <ul class="list collapsible__content">
           <li class="list__item list__item-with-border list__item-with-padding">
-            <a class="collapsible__link" href="">Hosting</a>
+            <a
+              class="collapsible__link"
+              href="https://www.google.com/search?q=hosting&sxsrf=APq-WBu_z9LS1ZYHdFlFJS2SpwApjJuYPA%3A1649579012400&ei=BJRSYu-FGMSTwPAPubKg8As&ved=0ahUKEwjvl8DYiIn3AhXECRAIHTkZCL4Q4dUDCA4&uact=5&oq=hosting&gs_lcp=Cgdnd3Mtd2l6EAMyCgguEMcBENEDEEMyBAgAEEMyBQgAEMsBMgUIABDLATILCC4QxwEQrwEQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLAToECCMQJzoFCAAQgAQ6CAguEIAEENQCOgsILhCABBDHARCvAUoECEEYAEoECEYYAFAAWJwJYMkKaABwAXgAgAGJAYgBpQaSAQMyLjWYAQCgAQHAAQE&sclient=gws-wiz"
+              target="_blank"
+              >Hosting</a
+            >
           </li>
           <li class="list__item list__item-with-border list__item-with-padding">
-            <a class="collapsible__link" href="">VPS</a>
+            <a
+              class="collapsible__link"
+              href="https://www.google.com/search?q=vps&sxsrf=APq-WBuHIRU4DeGMeOKsQBMGz4QMWRA92Q%3A1649579057099&ei=MZRSYpXeBeulrgSh4ZDYCQ&ved=0ahUKEwjVuujtiIn3AhXrkosKHaEwBJsQ4dUDCA4&uact=5&oq=vps&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6BwgAELADEEM6CggAEOQCELADGAE6EgguEMcBENEDEMgDELADEEMYAjoHCCMQ6gIQJzoFCAAQkQI6CwguEIAEEMcBENEDOgsILhCABBDHARCjAkoECEEYAEoECEYYAVCerwFYhLEBYNGzAWgEcAF4AIABhgGIAbICkgEDMi4xmAEAoAEBsAEKyAETwAEB2gEGCAEQARgJ2gEGCAIQARgI&sclient=gws-wiz"
+              target="_blank"
+              >VPS</a
+            >
           </li>
           <li class="list__item list__item-with-border list__item-with-padding">
-            <a class="collapsible__link" href="">Domain</a>
+            <a
+              class="collapsible__link"
+              href="https://www.google.com/search?q=domain&sxsrf=APq-WBv-5qmbQlFjrh5LYnkgoPbXyG_a8A%3A1649579086589&ei=TpRSYujNI4T6rgT6nb6oBA&ved=0ahUKEwjorPD7iIn3AhUEvYsKHfqOD0UQ4dUDCA4&uact=5&oq=domain&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBOgcIIxDqAhAnOgQIIxAnOgoILhDHARDRAxBDOgsILhCABBDHARDRAzoECC4QQzoLCC4QgAQQxwEQrwE6CgguEMcBEK8BEENKBAhBGABKBAhGGABQhAZYrgpgwgxoAXABeACAAWmIAc0EkgEDNC4ymAEAoAEBsAEKwAEB&sclient=gws-wiz"
+              target="_blank"
+              >Domain</a
+            >
           </li>
           <li class="list__item list__item-with-padding">
-            <a class="collapsible__link" href="">Pricing</a>
+            <a
+              class="collapsible__link"
+              href="https://www.google.com/search?q=pricing&sxsrf=APq-WButlQvkGiYYUCZNL2EWxU8NatR9Tw%3A1649579098418&ei=WpRSYtiPGYaarwT6qIbgDA&ved=0ahUKEwjYpMKBiYn3AhUGzYsKHXqUAcwQ4dUDCA4&uact=5&oq=pricing&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQywEyBQgAEMsBMgUIABCABDIFCAAQywEyBQgAEMsBMgQIABBDMgUIABCABDoHCCMQ6gIQJzoECCMQJzoKCC4QxwEQ0QMQQzoLCC4QgAQQxwEQ0QM6CwguEIAEEMcBEK8BOgUILhCABDoECC4QQzoHCC4Q1AIQQzoLCC4QgAQQxwEQowI6BwgAEAoQywFKBAhBGABKBAhGGABQogVYnAxgzQ1oAXABeACAAaYBiAGcBpIBAzEuNpgBAKABAbABCsABAQ&sclient=gws-wiz"
+              target="_blank"
+              >Pricing</a
+            >
           </li>
         </ul>
       </nav>
@@ -47,36 +84,42 @@
     <!-- Hero block -->
     <section class="block block--dark block--skewed--left">
       <div class="container grid grid--1x2">
-          <header class="block__header hero__content">
-              <h1 class="block__heading heading-white">Cloud Hosting for Pros</h2>
-              <p class="hero__text">
-                Deploy your website in less than 60 seconds.
-              </p>
-            <a class="button button--accent link-with-padding" href="">Get Started</a>
-          </header>
+        <header class="block__header hero__content">
+          <h2 class="block__heading heading-white">Cloud Hosting for Pros</h2>
+          <p class="hero__text">Deploy your website in less than 60 seconds.</p>
+          <a
+            class="button button--accent link-with-padding"
+            href="https://codewithmosh.teachable.com/p/all-access"
+            target="_blank"
+            >Get Started</a
+          >
+        </header>
         <picture>
-            <source type="image/webp" srcset="
-            images/banner(570px).webp 1x,
-            images/banner(1140px).webp 2x" />
-            <source type="image/png" srcset="
-            images/banner(570px).png 1x,
-            images/banner(1140px).png 2x" />
-            <img
-              class="large__image"
-              src="images/banner.png"
-              alt="Banner site photo"
-            />
-          </picture>
+          <source
+            type="image/webp"
+            srcset="images/banner(570px).webp 1x, images/banner(1140px).webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="images/banner(570px).png 1x, images/banner(1140px).png 2x"
+          />
+          <img
+            class="large__image"
+            src="images/banner.png"
+            alt="Banner site photo"
+          />
+        </picture>
       </div>
     </section>
 
     <!-- Domain block -->
-    <section class="domain-block block">
+    <section class="domain-block block" data-aos="zoom-in-up">
       <div class="container">
         <header class="block__header">
           <h2 class="block__heading">Starting at $10 per month</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dolor.
+            Bring your site to the next level with one of the most popular
+            domains!
           </p>
         </header>
       </div>
@@ -93,19 +136,21 @@
           Search
         </button>
       </div>
-      <ul class="list list--inline grid list--grid">
-        <li class="list__item domain-list__item badges badge badge--secondary">.com $9</li>
-        <li class="list__item domain-list__item badges">.sg $10</li>
-        <li class="list__item domain-list__item badges">.space $11</li>
-        <li class="list__item domain-list__item badges">.info $14</li>
-        <li class="list__item domain-list__item badges">.net $10</li>
-        <li class="list__item domain-list__item badges">.xyz $10</li>
+      <ul class="list grid list--grid">
+        <li class="domain-list__item badges badge badge--secondary">
+          .com $19
+        </li>
+        <li class="domain-list__item badges">.sg $10</li>
+        <li class="domain-list__item badges">.space $8</li>
+        <li class="domain-list__item badges">.info $9</li>
+        <li class="domain-list__item badges">.net $14</li>
+        <li class="domain-list__item badges">.bg $7</li>
       </ul>
     </section>
 
     <!-- Plans block -->
     <section class="plan-block">
-      <div class="plan">
+      <div class="plan" data-aos="flip-left" data-aos-duration="1500">
         <div class="card card--secondary">
           <header class="card__header">
             <h3 class="plan__name">Entry</h3>
@@ -116,51 +161,56 @@
           </header>
           <div class="card__body">
             <ul class="list list--tick">
-              <li class="list__item list__item-primary">Unlimited Websites</li>
-              <li class="list__item list__item-primary">Unlimited Bandwidth</li>
+              <li class="list__item list__item-primary">Up to 300 Websites</li>
+              <li class="list__item list__item-primary">Power Bandwidth</li>
               <li class="list__item list__item-primary">100 GB SSD Storage</li>
-              <li class="list__item list__item-primary">3 GB RAM</li>
+              <li class="list__item list__item-primary">1 GB RAM</li>
             </ul>
             <button class="button button--primary">Buy Now</button>
           </div>
         </div>
       </div>
-      <div class="plan plan--popular">
+      <div
+        class="plan plan--popular"
+        data-aos="flip-left"
+        data-aos-duration="1500"
+      >
         <div class="card card--primary">
           <header class="card__header">
-            <h3 class="plan__name">Business</h3>
-            <span class="plan__price">$24</span>
+            <h3 class="plan__name">Optimal</h3>
+            <span class="plan__price">$18</span>
             <span class="plan__billing-cycle">/month</span>
             <span class="badge badge--primary badge--small">20% OFF</span>
             <p class="plan__description">Optimal Cloud Experience</p>
           </header>
           <div class="card__body">
             <ul class="list list--tick">
-              <li class="list__item list__item-primary">Unlimited Websites</li>
+              <li class="list__item list__item-primary">Up to 500 websites</li>
               <li class="list__item list__item-primary">Unlimited Bandwidth</li>
-              <li class="list__item list__item-primary">100 GB SSD Storage</li>
+              <li class="list__item list__item-primary">300 GB SSD Storage</li>
               <li class="list__item list__item-primary">3 GB RAM</li>
-              <li class="list__item list__item-primary">2 CPU Cores</li>
+              <li class="list__item list__item-primary">1 CPU Cores</li>
             </ul>
             <button class="button button--primary">Buy Now</button>
           </div>
         </div>
       </div>
-      <div class="plan">
+      <div class="plan" data-aos="flip-left" data-aos-duration="1500">
         <div class="card card--secondary">
           <header class="card__header">
-            <h3 class="plan__name">Entry</h3>
-            <span class="plan__price">$14</span>
+            <h3 class="plan__name">Business</h3>
+            <span class="plan__price">$25</span>
             <span class="plan__billing-cycle">/month</span>
             <span class="badge badge--secondary badge--small">10% OFF</span>
-            <p class="plan__description">Easy start on the cloud</p>
+            <p class="plan__description">Plan for Business Solutions</p>
           </header>
           <div class="card__body">
             <ul class="list list--tick">
               <li class="list__item list__item-primary">Unlimited Websites</li>
               <li class="list__item list__item-primary">Unlimited Bandwidth</li>
-              <li class="list__item list__item-primary">100 GB SSD Storage</li>
-              <li class="list__item list__item-primary">3 GB RAM</li>
+              <li class="list__item list__item-primary">500 GB SSD Storage</li>
+              <li class="list__item list__item-primary">5 GB RAM</li>
+              <li class="list__item list__item-primary">2 CPU Cores</li>
             </ul>
             <button class="button button--primary">Buy Now</button>
           </div>
@@ -169,17 +219,19 @@
     </section>
 
     <!-- Feature block -->
-  <section class="feature-block">
-    <div class="container block feature-block__head">
-      <header class="block__header">
-        <h2 class="block__heading">Host on the Cloud to Keep Growing</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dolor.
-        </p>
-      </header>
-    </div>
-    <div>
-        <article class="grid grid--1x2 block container ">
+    <section class="feature-block">
+      <div class="container block feature-block__head">
+        <header class="block__header">
+          <h2 class="block__heading">Host on the Cloud to Keep Growing</h2>
+          <p>Why should you take care about the domain on our platform?</p>
+        </header>
+      </div>
+      <div>
+        <article
+          class="grid grid--1x2 block container"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <div class="feature-header">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -189,14 +241,13 @@
             <header class="block__header">
               <h2 class="block__heading">Super Easy to Use</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatum
-                ullam et facere nihil minima asperiores suscipit quo distinctio
-                inventore.
+                There are no unexpected situations with your domain. We have a
+                simple instruction about setting up the domain in less than 15
+                minutes!
               </p>
             </header>
             <a href="#" class="link-arrow">Learn more</a>
           </div>
-  
           <picture>
             <source
               type="image/webp"
@@ -206,11 +257,19 @@
               type="image/jpg"
               srcset="images/easy(570px).jpg 1x, images/easy(1283px).jpg 2x"
             />
-            <img class="large__image" src="images/easy.jpg" alt="Super Easy to Use" />
+            <img
+              class="large__image"
+              src="images/easy.jpg"
+              alt="Super Easy to Use"
+            />
           </picture>
         </article>
-  
-        <article class="grid grid--1x2 block container feature-block">
+
+        <article
+          class="grid grid--1x2 block container feature-block"
+          data-aos="fade-right"
+          data-aos-duration="500"
+        >
           <div class="feature-header">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -220,9 +279,8 @@
             <header class="block__header">
               <h2 class="block__heading">Simply Fast Websites</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatum
-                ullam et facere nihil minima asperiores suscipit quo distinctio
-                inventore.
+                After setting up the domain you will be provided with powerful
+                website that can serves thousands of people at a time.
               </p>
             </header>
             <a href="#" class="link-arrow">Learn more</a>
@@ -236,11 +294,19 @@
               type="image/jpg"
               srcset="images/fast(550px).jpg 1x, images/fast.jpg 2x"
             />
-            <img class="large__image" src="images/fast.jpg" alt="Simply Fast Websites" />
+            <img
+              class="large__image"
+              src="images/fast.jpg"
+              alt="Simply Fast Websites"
+            />
           </picture>
         </article>
-  
-        <article class="grid grid--1x2 block container feature-block">
+
+        <article
+          class="grid grid--1x2 block container feature-block"
+          data-aos="fade-left"
+          data-aos-duration="500"
+        >
           <div class="feature-header">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -250,9 +316,9 @@
             <header class="block__header">
               <h2 class="block__heading">Wordpress Made Easy</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatum
-                ullam et facere nihil minima asperiores suscipit quo distinctio
-                inventore.
+                By using the WordPress engine it is no need in finding out the
+                developers for creating the website. You may create you own one
+                with no coding!
               </p>
             </header>
             <a href="#" class="link-arrow">Learn more</a>
@@ -266,11 +332,19 @@
               type="image/jpg"
               srcset="images/wordpress(550px).jpg 1x, images/wordpress.jpg 2x"
             />
-            <img class="large__image" src="images/wordpress.jpg" alt="Super Easy to Use" />
+            <img
+              class="large__image"
+              src="images/wordpress.jpg"
+              alt="Super Easy to Use"
+            />
           </picture>
         </article>
-  
-        <article class="grid grid--1x2 block container feature-block">
+
+        <article
+          class="grid grid--1x2 block container feature-block"
+          data-aos="fade-down"
+          data-aos-duration="500"
+        >
           <div class="feature-header">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -280,9 +354,9 @@
             <header class="block__header">
               <h2 class="block__heading">24/7 Expert Support</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatum
-                ullam et facere nihil minima asperiores suscipit quo distinctio
-                inventore.
+                Even though our instruction entirely explains all the nuances of
+                setting up the domain, our experts are ready 24/7 to help you
+                with any issues of any complexity.
               </p>
             </header>
             <a href="#" class="link-arrow">Learn more</a>
@@ -296,19 +370,25 @@
               type="image/jpg"
               srcset="images/support(550px).jpg 1x, images/support.jpg 2x"
             />
-            <img class="large__image" src="images/support.jpg" alt="Super Easy to Use" />
+            <img
+              class="large__image"
+              src="images/support.jpg"
+              alt="Super Easy to Use"
+            />
           </picture>
-        </article>      
+        </article>
       </div>
     </section>
-    
+
     <!-- Showcase block -->
     <section class="showcase-block block--dark block block--skewed--right">
       <header class="block__header">
-        <h2 class="heading-white heading-line-height">User-friendly Control Panel</h2>
+        <h2 class="heading-white heading-line-height">
+          User-friendly Control Panel
+        </h2>
       </header>
       <div class="grid grid--1x2">
-        <picture>
+        <picture data-aos="fade-right" data-aos-duration="1000">
           <source
             type="image/webp"
             srcset="images/ipad(700px).webp 1x, images/ipad.webp 2x" />
@@ -317,7 +397,7 @@
             srcset="images/ipad(700px).png 1x, images/ipad.png 2x" />
           <img class="large__image" src="images/ipad.png" alt="IPad"
         /></picture>
-        <ul class="list">
+        <ul class="list" data-aos="fade-up" data-aos-duration="1250">
           <li>
             <div class="media-object">
               <div class="media__icon">
@@ -326,10 +406,13 @@
                 </svg>
               </div>
               <div class="media__body">
-                <h3 class="heading-white heading-line-height">Easy Start & Managed Updates</h3>
+                <h3 class="heading-white heading-line-height">
+                  Easy Start & Managed Updates
+                </h3>
                 <p>
-                  We make you WordPress and WooCommerce development flow easier with
-                  a convenient staging tool and Git and WP-CLI integration
+                  Your onboarding of setting up the domain takes around 15
+                  minutes, then you are provided with the supportable product
+                  that meets all the modern requirements.
                 </p>
               </div>
             </div>
@@ -342,10 +425,12 @@
                 </svg>
               </div>
               <div class="media__body">
-                <h3 class="heading-white heading-line-height">Staging, Git and WP-CLI</h3>
+                <h3 class="heading-white heading-line-height">
+                  Staging, Git and WP-CLI
+                </h3>
                 <p>
-                  We make you WordPress and WooCommerce development flow easier with
-                  a convenient staging tool and Git and WP-CLI integration
+                  We make you WordPress and WooCommerce development flow easier
+                  with a convenient staging tool and Git and WP-CLI integration
                 </p>
               </div>
             </div>
@@ -358,10 +443,12 @@
                 </svg>
               </div>
               <div class="media__body">
-                <h3 class="heading-white heading-line-height">Dynamic Caching & More</h3>
+                <h3 class="heading-white heading-line-height">
+                  Dynamic Caching & More
+                </h3>
                 <p>
-                  We make you WordPress and WooCommerce development flow easier with
-                  a convenient staging tool and Git and WP-CLI integration
+                  Our dynamic caching and more other tools will help your site
+                  have a large advantage compared to other sites.
                 </p>
               </div>
             </div>
@@ -370,13 +457,15 @@
       </div>
     </section>
 
-    
     <!-- Testimonial block -->
     <section class="block testimonial-block">
-      <div class="container">
+      <div class="container" data-aos="fade-up-right" data-aos-duration="750">
         <header class="block__header">
           <h2 class="block__heading">What our Customers are Saying</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>
+            We are working on improving our services and making our customers
+            happy!
+          </p>
         </header>
         <div class="quote-card">
           <div class="grid grid--1x2">
@@ -390,9 +479,11 @@
             </div>
             <div class="quote">
               <div class="quote__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-                expedita officiis doloribus quos inventore molestiae suscipit illum
-                eveniet enim impedit!
+                I had large issues with my site on other cloud hosting company -
+                bad performance, complex setting... I was really disappointed,
+                but fortunately one day I has found this site and get in touch
+                with these guys. They help me with all the nuances and my site
+                are much better now!
               </div>
               <div class="quote__sign">
                 <div class="quote__line">
@@ -402,7 +493,7 @@
                 </div>
                 <div class="quote__author-info">
                   <p class="quote__full-name">Jhone Lumeo</p>
-                  <p class="quote__company-name">Mosh company ceo</p>
+                  <p class="quote__company-name">Jally company CEO</p>
                 </div>
               </div>
             </div>
@@ -411,26 +502,32 @@
       </div>
     </section>
 
-    
     <!-- Footer and callout block -->
     <section class="footer__and__callout">
-      <div class="callout callout--primary container">
+      <div
+        class="callout callout--primary container"
+        data-aos="flip-up"
+        data-aos-duration="500"
+      >
         <div class="grid grid--1x2">
           <div>
-            <h2 class="block__heading heading-white heading-line-height">Ready to Get Started?</h2>
+            <h2 class="block__heading heading-white heading-line-height">
+              Ready to Get Started?
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-              ipsam ad molestias nisi laboriosam obcaecati aliquid numquam!
-              Nemo, odit est?
+              If you are encouraged with our services and want to know more.
+              Jump in and let's start improving your business!
             </p>
           </div>
-          <a href="" class="button button--secondary link-with-padding">Get Started</a>
+          <a
+            href="https://codewithmosh.teachable.com/p/all-access"
+            class="button button--secondary link-with-padding"
+            >Get Started</a
+          >
         </div>
       </div>
       <div class="footer">
-        <div
-          class="collapsible collapsible-border-padding"
-        >
+        <div class="collapsible collapsible-border-padding">
           <header class="collapsible__header">
             <h2 class="collapsible__heading heading-white heading-line-height">
               Products
@@ -478,38 +575,39 @@
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="https://www.google.com/search?q=wordpress+hosting&oq=wordpress+hosting&aqs=chrome..69i57j0i20i263i512j0i512j0i20i263i512j0i512l6.3217j0j15&sourceid=chrome&ie=UTF-8"
+                  target="_blank"
                   >WordPress Hosting</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="https://www.google.com/search?q=free+automated+wordpress&sxsrf=APq-WBs-EbrMS2uCic8n3DlvYM5eEja4Sw%3A1649580985588&ei=uZtSYvm4I5eJ1sQPxPm3qAM&ved=0ahUKEwi5-bGFkIn3AhWXhJUCHcT8DTUQ4dUDCA4&uact=5&oq=free+automated+wordpress&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjIICAAQFhAKEB46BwgjEOoCECc6BAgjECc6BAgAEEM6CgguEMcBENEDEEM6CwguEIAEEMcBENEDOgUIABCABDoFCAAQywE6CAguENQCEMsBOgUILhDLAUoECEEYAEoECEYYAFDzB1jWKmDdK2gCcAF4AIABcYgB5hGSAQQxNy43mAEAoAEBsAEKwAEB&sclient=gws-wiz"
+                  target="_blank"
                   >Free Automated WordPress</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="https://www.google.com/search?q=migrations+in+c%23&sxsrf=APq-WBuS0Hk-JV9hXCqTEl0Nkee4JLfZ4w%3A1649581078219&ei=FpxSYoj3DIr-rgSJiZ2gCw&oq=migrations+i&gs_lcp=Cgdnd3Mtd2l6EAMYCDIKCAAQgAQQhwIQFDIKCAAQgAQQhwIQFDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgcIABCABBAKMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6BwgAELADEEM6CggAEOQCELADGAE6DAguEMgDELADEEMYAjoFCAAQywE6CgguEIAEEIcCEBQ6BAgAEENKBAhBGABKBAhGGAFQzgtYmRFgzTNoAXABeACAAXSIAeMBkgEDMC4ymAEAoAEByAERwAEB2gEGCAEQARgJ2gEGCAIQARgI&sclient=gws-wiz"
+                  target="_blank"
                   >Migrations</a
                 >
               </li>
             </ul>
           </div>
         </div>
-        <div
-          class="collapsible collapsible-border-padding"
-        >
+        <div class="collapsible collapsible-border-padding">
           <header class="collapsible__header">
             <h2 class="collapsible__heading heading-white heading-line-height">
               Company
             </h2>
             <svg
-              id="Layer_1"
+              id="Layer_2"
               class="icon collapsible__chevron"
-              data-name="Layer 1"
+              data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 51 51"
             >
@@ -549,38 +647,36 @@
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >About</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Affiliates</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Blog</a
                 >
               </li>
             </ul>
           </div>
         </div>
-        <div
-          class="collapsible collapsible-border-padding"
-        >
+        <div class="collapsible collapsible-border-padding">
           <header class="collapsible__header">
             <h2 class="collapsible__heading heading-white heading-line-height">
               Support
             </h2>
             <svg
-              id="Layer_1"
+              id="Layer_3"
               class="icon collapsible__chevron"
-              data-name="Layer 1"
+              data-name="Layer 3"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 51 51"
             >
@@ -620,38 +716,36 @@
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Contact</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Knowledge Base</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >FAQ</a
                 >
               </li>
             </ul>
           </div>
         </div>
-        <div
-          class="collapsible collapsible-border-padding"
-        >
+        <div class="collapsible collapsible-border-padding">
           <header class="collapsible__header">
             <h2 class="collapsible__heading heading-white heading-line-height">
               Domains
             </h2>
             <svg
-              id="Layer_1"
+              id="Layer_4"
               class="icon collapsible__chevron"
-              data-name="Layer 1"
+              data-name="Layer 4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 51 51"
             >
@@ -691,21 +785,21 @@
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Domain Checker</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Domain Transfer</a
                 >
               </li>
               <li class="list__item">
                 <a
                   class="collapsible__content--dark collapsible__link-footer"
-                  href=""
+                  href="#"
                   >Free Domain</a
                 >
               </li>
@@ -713,14 +807,15 @@
           </div>
         </div>
         <div class="footer__logo-block">
-          <img
-            src="images/logo(footer).png"
-            alt="Logo of the site."
-          />
+          <img src="images/logo(footer).png" alt="Logo of the site." />
           <p>Copyright 2022 Mosh Hamedani</p>
         </div>
       </div>
     </section>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
