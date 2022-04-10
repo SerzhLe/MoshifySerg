@@ -738,11 +738,6 @@ background-color: hsl(189deg, 100%, 45%);
   font-size: 2rem;
 }
 
-.nav__menu-icon:hover { 
-  fill: #fff;
-  opacity: 1;
-}
-
 .collapsible__link:hover {
   color: #fff;
 }
@@ -754,7 +749,6 @@ background-color: hsl(189deg, 100%, 45%);
 .list__item-with-padding {
   padding: 0.3rem 2rem;
 }
-
 
 .nav.collapsible--expanded .nav__menu-icon { 
   /* два класса объеденены потом что хотим чтобы правило было когда доступны эти два класса */
