@@ -708,7 +708,7 @@ background-color: hsl(189deg, 100%, 45%);
 /* Navigation bar */
 .nav {
   background-color: #000;
-  padding: 1rem;
+  padding: 0 1rem;
   position: fixed;
   top: 0;
   z-index: 2; /*потому что callout элемент имеет z-индекс 1*/
