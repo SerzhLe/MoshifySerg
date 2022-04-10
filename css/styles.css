@@ -230,6 +230,7 @@ a {
   color: #fff;
   padding: 1.5rem;
   white-space: nowrap;
+  transition: background-color 0.5s;
 }
 
 .button--primary {
