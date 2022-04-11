@@ -360,12 +360,20 @@ background-color: hsl(189deg, 100%, 45%);
   background-color: var(--color-secondary);
 }
 
+.card--heading .card__header {
+  background-color: var(--color-heading);
+}
+
 .card--primary .badge--primary {
   background-color: hsl(214deg, 100%, 50%);
 }
 
 .card--secondary .badge--secondary {
   background-color: hsl(189deg, 100%, 45%);
+}
+
+.card--heading .badge--heading {
+  background-color: hsl(253deg, 86%, 12%);
 }
 
 /* Plan */
@@ -403,8 +411,8 @@ background-color: hsl(189deg, 100%, 45%);
 .plan--popular .card__header::before {  /*сделали так что если хочешь сделать карточку popular - Нужно всего лишь указать класс .plan--popular*/
   content: url(../images/popular.svg);
   position: absolute;
-  right: 5%;
-  top: -10px;
+  right: 0;
+  top: -7px;
   display: inline-block;
   width: 45px;
 }
@@ -413,6 +421,11 @@ background-color: hsl(189deg, 100%, 45%);
   margin-bottom: 4rem;
 }
 
+@media screen and (min-width: 400px) {
+  .plan--popular .card__header::before {
+    right: 5%;
+  }
+}
 
 @media screen and (min-width:1024px) {
   .plan {
