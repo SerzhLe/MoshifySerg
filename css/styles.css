@@ -954,6 +954,7 @@ background-color: hsl(189deg, 100%, 45%);
 
   .showcase-block .large__image {
     width: 700px;
+    margin-right: 20px;
   }
 }
 
