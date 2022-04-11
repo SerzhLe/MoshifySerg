@@ -286,7 +286,6 @@ background-color: hsl(189deg, 100%, 45%);
   margin: auto;
   display: flex;
   border-radius: var(--border-radius);
-  padding: 0.25rem 0.5rem;
   width: 95%;
   box-shadow: 0 0 30px 15px rgb(236, 231, 231);
 }
@@ -302,12 +301,19 @@ background-color: hsl(189deg, 100%, 45%);
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+  margin: 0.25rem 0.2rem;
 }
 
 .button .icon {
   width: 20px;
   fill: #fff;
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .input-group {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width:1024px) {
@@ -737,6 +743,7 @@ background-color: hsl(189deg, 100%, 45%);
 .collapsible__link {
   color: hsl(251deg, 10%, 80%);
   font-size: 2rem;
+  transition: color 0.3s;
 }
 
 .collapsible__link:hover {
