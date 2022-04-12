@@ -748,6 +748,7 @@ background-color: hsl(189deg, 100%, 45%);
 .nav__menu-icon {
   cursor: pointer;
   opacity: 0.5;
+  transition: box-shadow 0.3s;
 }
 
 .logo {
